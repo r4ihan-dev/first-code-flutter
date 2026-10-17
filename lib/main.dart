@@ -114,20 +114,55 @@
 //     );
 //   }
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
-void main() {
-  runApp();
-}
+// void main() {
+//   // اضافه کردن MaterialApp برای حل مشکل خطای روت و تم
+//   runApp(
+//     MaterialApp(
+//       debugShowCheckedModeBanner: false, // حذف نوار دیباگ بالای صفحه
+//       home: HomePage(),
+//     ),
+//   );
+// }
 
-class HomePage extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _HomePageState();
-}
+// class HomePage extends StatefulWidget {
+//   @override
+//   State<StatefulWidget> createState() => _HomePageState();
+// }
 
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
+// class _HomePageState extends State<HomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return DefaultTabController(
+//       length: 3,
+//       child: Scaffold(
+//         appBar: AppBar(
+//           title: Column(
+//             children: [
+//               Text("Buy any book i n a menute with"),
+//               Text(
+//                 "BookFly",
+//                 style: GoogleFonts.pacifico(
+//                   color: Colors.purple,
+//                   fontSize: 20,
+//                   fontWeight: FontWeight.w500,
+//                 ),
+//               ),
+//             ],
+//           ),
+//           leading: Icon(Icons.menu),
+//           actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+//           backgroundColor: Colors.white,
+//           bottom: TabBar(
+//             labelColor: Colors.purple,
+//             unselectedLabelColor: Colors.grey,
+//             indicatorColor: Colors.purple,
+//             tabs: [Text("Novels"), Text("Science"), Text("History")],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
