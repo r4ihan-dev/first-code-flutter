@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_app/Book_repo/Book_repo.dart';
+import 'package:my_app/models/Books.dart';
 
 void main() {
   runApp(
@@ -57,6 +59,7 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           children: [
             My_Book_tile("Novel", 0),
+            SingleBookLayout(BookRepo.Novels[0]),
             My_Book_tile("Science", 1),
             My_Book_tile("History", 2),
           ],
@@ -88,6 +91,35 @@ Widget My_Book_tile(String title, int index) {
         ),
         Divider(),
       ],
+    ),
+  );
+}
+
+//
+Widget SingleBookLayout(Books Books) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 12),
+    child: SizedBox(
+      width: double.infinity,
+      height: 180,
+      child: Row(
+        children: [
+          Expanded(flex: 2, child: Image.network(Books.image)),
+          Expanded(
+            flex: 3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  Books.name,
+                  style: TextStyle(fontSize: 23, fontWeight: FontWeight.w600),
+                ),
+                Text(Books.description),
+              ],
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }
