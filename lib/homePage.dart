@@ -11,8 +11,10 @@ class _HomePageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
         title: Text('playlist', style: GoogleFonts.pacifico(fontSize: 21)),
       ),
+      drawer: Drawer(),
     );
   }
 }
